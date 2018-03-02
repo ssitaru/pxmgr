@@ -12,6 +12,9 @@ class UsersController extends AdminController
 	{
 		$usersTable = TableRegistry::get('Users');
 		$this->set("users", $usersTable->find('all'));	
+		
+		// for JSON output
+		$this->set('_serialize', 'users');
 	}
 	
 	/**
@@ -24,6 +27,9 @@ class UsersController extends AdminController
 		}
 		$user = $this->Users->get($id);
 		$this->set('user', $user);
+
+		// for JSON output
+		$this->set('_serialize', 'user');
 		
 		// if we want to save from Form
 		if($this->request->is('post'))

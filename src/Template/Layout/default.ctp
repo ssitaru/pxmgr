@@ -6,15 +6,16 @@
         <?= $this->fetch('title') ?>
     </title>
     <?= $this->Html->meta('icon') ?>
-    
-    <?= $this->Html->css('materialize.min.css') ?>
-    <?= $this->Html->script('materialize.min.js') ?>
 
     <?= $this->fetch('meta') ?>
     
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <?= $this->Html->css('bootstrap.min.css'); ?>
+    <?= $this->Html->css('material-icons.min.css'); ?>
+    <?= $this->Html->script('jquery.js'); ?>
+    <?= $this->Html->script('popper.min.js'); ?>
+    <?= $this->Html->script('bootstrap.min.js'); ?>
+    
     <?= $this->fetch('css') ?>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <?= $this->fetch('script') ?>
 </head>
 <body>

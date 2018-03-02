@@ -1,18 +1,21 @@
-  <nav class="nav">
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">PXMgr Admin</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-	    <li><?=$this->Html->link('<i class="material-icons left">settings</i>General', '/admin/', ['escape' => false]);?></li> 
-        <li><?=$this->Html->link('<i class="material-icons left">person</i>Users', '/admin/users/', ['escape' => false]);?></li>
-        <li><?=$this->Html->link('<i class="material-icons left">folder_shared</i>Patients', '/admin/patients/', ['escape' => false]);?></li>
-      </ul>
-    </div>
-    <div class="nav-content">
-      <ul class="tabs tabs-transparent">
-        <li class="tab"><a href="#test1">Test 1</a></li>
-        <li class="tab"><a class="active" href="#test2">Test 2</a></li>
-        <li class="tab disabled"><a href="#test3">Disabled Tab</a></li>
-        <li class="tab"><a href="#test4">Test 4</a></li>
-      </ul>
-    </div>
-  </nav>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Admin</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <?=$this->Html->link('<i class="material-icons">settings</i>General', '/admin/', ['class' => 'nav-link', 'escape'=>false]);?>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>

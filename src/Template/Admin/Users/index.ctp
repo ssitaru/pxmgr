@@ -1,7 +1,8 @@
 <?= $this->element('admin_menu'); ?>
-<div class="col s12">
+
+<div>
 <h4>Users Overview</h4>
-<table class="tblUsers highlight">
+<table class="tblUsers table">
 	<thead>
 		<th>ID</th>
 		<th>Username</th>
@@ -25,5 +26,9 @@
 	<?php endforeach; ?>
 	</tbody>
 </table>
-<a class="btn btn-floating"><i class="material-icons">add</i></a>
+<div>
+	<?=$this->Html->link('Add User', ['action' => 'edit'], ['escape' => false, 'class' => 'btn btn-primary']) ?>
 </div>
+</div>
+
+<?= $this->element('Users/edit_modal'); ?>

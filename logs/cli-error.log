@@ -1,0 +1,46 @@
+2018-03-02 21:09:55 Error: [Symfony\Component\Console\Exception\RuntimeException] Not enough arguments (missing: "name"). in /usr/local/var/www/pxmgr/vendor/symfony/console/Input/Input.php on line 76
+Stack Trace:
+#0 /usr/local/var/www/pxmgr/vendor/symfony/console/Command/Command.php(247): Symfony\Component\Console\Input\Input->validate()
+#1 /usr/local/var/www/pxmgr/vendor/symfony/console/Application.php(946): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 /usr/local/var/www/pxmgr/vendor/symfony/console/Application.php(248): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Create), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /usr/local/var/www/pxmgr/vendor/symfony/console/Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 /usr/local/var/www/pxmgr/vendor/cakephp/migrations/src/Shell/MigrationsShell.php(108): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Console/Shell.php(507): Migrations\Shell\MigrationsShell->main('migrations', 'create')
+#6 /usr/local/var/www/pxmgr/vendor/cakephp/migrations/src/Shell/MigrationsShell.php(164): Cake\Console\Shell->runCommand(Array, true, Array)
+#7 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Console/CommandRunner.php(141): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#8 /usr/local/var/www/pxmgr/bin/cake.php(12): Cake\Console\CommandRunner->run(Array)
+#9 {main}
+
+
+2018-03-02 21:10:01 Error: [InvalidArgumentException] The migration class name "seed" is invalid. Please use CamelCase format. in /usr/local/var/www/pxmgr/vendor/robmorgan/phinx/src/Phinx/Console/Command/Create.php on line 173
+Stack Trace:
+#0 /usr/local/var/www/pxmgr/vendor/cakephp/migrations/src/Command/CommandTrait.php(35): Phinx\Console\Command\Create->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#1 /usr/local/var/www/pxmgr/vendor/cakephp/migrations/src/Command/Create.php(72): Migrations\Command\Create->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 /usr/local/var/www/pxmgr/vendor/symfony/console/Command/Command.php(252): Migrations\Command\Create->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /usr/local/var/www/pxmgr/vendor/symfony/console/Application.php(946): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 /usr/local/var/www/pxmgr/vendor/symfony/console/Application.php(248): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Create), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 /usr/local/var/www/pxmgr/vendor/symfony/console/Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 /usr/local/var/www/pxmgr/vendor/cakephp/migrations/src/Shell/MigrationsShell.php(108): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Console/Shell.php(507): Migrations\Shell\MigrationsShell->main('migrations', 'create', 'seed')
+#8 /usr/local/var/www/pxmgr/vendor/cakephp/migrations/src/Shell/MigrationsShell.php(164): Cake\Console\Shell->runCommand(Array, true, Array)
+#9 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Console/CommandRunner.php(141): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#10 /usr/local/var/www/pxmgr/bin/cake.php(12): Cake\Console\CommandRunner->run(Array)
+#11 {main}
+
+
+2018-03-02 21:10:13 Error: [InvalidArgumentException] The migration class name "help" is invalid. Please use CamelCase format. in /usr/local/var/www/pxmgr/vendor/robmorgan/phinx/src/Phinx/Console/Command/Create.php on line 173
+Stack Trace:
+#0 /usr/local/var/www/pxmgr/vendor/cakephp/migrations/src/Command/CommandTrait.php(35): Phinx\Console\Command\Create->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#1 /usr/local/var/www/pxmgr/vendor/cakephp/migrations/src/Command/Create.php(72): Migrations\Command\Create->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 /usr/local/var/www/pxmgr/vendor/symfony/console/Command/Command.php(252): Migrations\Command\Create->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /usr/local/var/www/pxmgr/vendor/symfony/console/Application.php(946): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 /usr/local/var/www/pxmgr/vendor/symfony/console/Application.php(248): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Create), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 /usr/local/var/www/pxmgr/vendor/symfony/console/Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 /usr/local/var/www/pxmgr/vendor/cakephp/migrations/src/Shell/MigrationsShell.php(108): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Console/Shell.php(507): Migrations\Shell\MigrationsShell->main('migrations', 'create', 'help')
+#8 /usr/local/var/www/pxmgr/vendor/cakephp/migrations/src/Shell/MigrationsShell.php(164): Cake\Console\Shell->runCommand(Array, true, Array)
+#9 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Console/CommandRunner.php(141): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#10 /usr/local/var/www/pxmgr/bin/cake.php(12): Cake\Console\CommandRunner->run(Array)
+#11 {main}
+
+
