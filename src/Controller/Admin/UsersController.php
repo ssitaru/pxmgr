@@ -34,13 +34,25 @@ class UsersController extends AdminController
 		// if we want to save from Form
 		if($this->request->is('get'))
 		{
+			// password field = empty
+			//$user->password = '';
 			$this->render('edit', 'ajax');
 		}
 		else
 		{
 			$this->Users->patchEntity($user, $this->request->getData());
 			$this->Users->save($user);
-			$this->render('/Element/ajax_success', 'ajax');
+			if(empty($user->errors))
+			{
+				$this->set('success', true);
+			}
+			else
+			{
+				$this->set('success', false);
+				$this->set('message', debug($user->errors));
+			}
+			
+			$this->render('/Element/ajax_response', 'ajax');
 		}
 		
 	}

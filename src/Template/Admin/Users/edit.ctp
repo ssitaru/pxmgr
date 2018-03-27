@@ -13,7 +13,7 @@
 			<?= $this->Form->control('username', ['type' => 'text']); ?>
         </div>
         <div class="form-group">
-			<?= $this->Form->control('password'); ?>
+			<?= $this->Form->control('password', ['placeholder' => 'unchanged', 'value' => '']); ?>
         </div>
         <div class="form-group">
 			<?= $this->Form->control('fullname', ['type' => 'text']); ?>
@@ -35,6 +35,12 @@
 </div>
 
 <script type="text/javascript">
+	function ajaxDone()
+	{
+		$('#modalUsersEdit').modal('hide');
+		displayAlert('success', 'User modified');
+	}
+	
 	$(document).ready(function(){
 		// remove modal element from DOM
 		$('#modalUsersEdit').on('hidden.bs.modal', function (e) {
@@ -42,12 +48,10 @@
 		});
 		
 		// AJAX Forms
-		$('#modalUsersEdit form').ajaxForm({method: 'POST', success: function() { 
-        	alert("done");
-        }});
+		$('#modalUsersEdit form').ajaxForm({method: 'POST', success: ajaxDone});
 		
 		$('#modalUsersEdit #btnSave').click(function(){
-			$('#modalUsersEdit form').ajaxSubmit();
+			$('#modalUsersEdit form').ajaxSubmit({method: 'POST', success: ajaxDone});
 		});
 		
 		 

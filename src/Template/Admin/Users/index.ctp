@@ -1,4 +1,4 @@
-<?= $this->element('admin_menu'); ?>
+<?= $this->element('admin_menu', ['menuitem' => 'users']); ?>
 
 <div>
 <h4>Users Overview</h4>

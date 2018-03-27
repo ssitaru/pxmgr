@@ -1683,3 +1683,761 @@ Stack Trace:
 #15 {main}
 
 
+2018-03-27 03:48:22 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "/js/popper.min.js.map" could not be found.
+Exception Attributes: array (
+  'url' => '/js/popper.min.js.map',
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Router.php(370): Cake\Routing\RouteCollection->parseRequest(Object(Cake\Http\ServerRequest))
+#1 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(88): Cake\Routing\Router::parseRequest(Object(Cake\Http\ServerRequest))
+#2 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#3 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 /usr/local/var/www/pxmgr/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /usr/local/var/www/pxmgr/webroot/index.php(40): Cake\Http\Server->run()
+#14 /usr/local/var/www/pxmgr/index.php(16): require('/usr/local/var/...')
+#15 {main}
+
+
+2018-03-27 04:06:23 Error: [ParseError] syntax error, unexpected '}', expecting ',' or ';'
+Request URL: /admin/users
+Stack Trace:
+#0 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/View/View.php(1157): Cake\View\View->_evaluate('/usr/local/var/...', Array)
+#1 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/View/View.php(1554): Cake\View\View->_render('/usr/local/var/...', Array)
+#2 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/View/View.php(668): Cake\View\View->_renderElement('/usr/local/var/...', Array, Array)
+#3 /usr/local/var/www/pxmgr/src/Template/Admin/Users/index.ctp(1): Cake\View\View->element('admin_menu', Array)
+#4 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/View/View.php(1196): include('/usr/local/var/...')
+#5 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/View/View.php(1157): Cake\View\View->_evaluate('/usr/local/var/...', Array)
+#6 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/View/View.php(765): Cake\View\View->_render('/usr/local/var/...')
+#7 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Controller/Controller.php(623): Cake\View\View->render(NULL, NULL)
+#8 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(125): Cake\Controller\Controller->render()
+#9 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(PXMgr\Controller\Admin\UsersController))
+#10 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 /usr/local/var/www/pxmgr/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 /usr/local/var/www/pxmgr/webroot/index.php(40): Cake\Http\Server->run()
+#25 /usr/local/var/www/pxmgr/index.php(16): require('/usr/local/var/...')
+#26 {main}
+
+
+2018-03-27 04:06:31 Error: [ParseError] syntax error, unexpected '}', expecting ',' or ';'
+Request URL: /admin/users
+Stack Trace:
+#0 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/View/View.php(1157): Cake\View\View->_evaluate('/usr/local/var/...', Array)
+#1 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/View/View.php(1554): Cake\View\View->_render('/usr/local/var/...', Array)
+#2 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/View/View.php(668): Cake\View\View->_renderElement('/usr/local/var/...', Array, Array)
+#3 /usr/local/var/www/pxmgr/src/Template/Admin/Users/index.ctp(1): Cake\View\View->element('admin_menu', Array)
+#4 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/View/View.php(1196): include('/usr/local/var/...')
+#5 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/View/View.php(1157): Cake\View\View->_evaluate('/usr/local/var/...', Array)
+#6 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/View/View.php(765): Cake\View\View->_render('/usr/local/var/...')
+#7 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Controller/Controller.php(623): Cake\View\View->render(NULL, NULL)
+#8 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(125): Cake\Controller\Controller->render()
+#9 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(PXMgr\Controller\Admin\UsersController))
+#10 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 /usr/local/var/www/pxmgr/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 /usr/local/var/www/pxmgr/webroot/index.php(40): Cake\Http\Server->run()
+#25 /usr/local/var/www/pxmgr/index.php(16): require('/usr/local/var/...')
+#26 {main}
+
+
+2018-03-27 04:06:46 Error: [ParseError] syntax error, unexpected '}', expecting ',' or ';'
+Request URL: /admin/users
+Stack Trace:
+#0 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/View/View.php(1157): Cake\View\View->_evaluate('/usr/local/var/...', Array)
+#1 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/View/View.php(1554): Cake\View\View->_render('/usr/local/var/...', Array)
+#2 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/View/View.php(668): Cake\View\View->_renderElement('/usr/local/var/...', Array, Array)
+#3 /usr/local/var/www/pxmgr/src/Template/Admin/Users/index.ctp(1): Cake\View\View->element('admin_menu', Array)
+#4 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/View/View.php(1196): include('/usr/local/var/...')
+#5 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/View/View.php(1157): Cake\View\View->_evaluate('/usr/local/var/...', Array)
+#6 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/View/View.php(765): Cake\View\View->_render('/usr/local/var/...')
+#7 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Controller/Controller.php(623): Cake\View\View->render(NULL, NULL)
+#8 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(125): Cake\Controller\Controller->render()
+#9 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(PXMgr\Controller\Admin\UsersController))
+#10 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 /usr/local/var/www/pxmgr/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 /usr/local/var/www/pxmgr/webroot/index.php(40): Cake\Http\Server->run()
+#25 /usr/local/var/www/pxmgr/index.php(16): require('/usr/local/var/...')
+#26 {main}
+
+
+2018-03-27 04:07:00 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "/admin/" could not be found.
+Exception Attributes: array (
+  'url' => '/admin/',
+)
+Request URL: /admin/
+Referer URL: http://localhost/pxmgr/admin/users
+Stack Trace:
+#0 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Router.php(370): Cake\Routing\RouteCollection->parseRequest(Object(Cake\Http\ServerRequest))
+#1 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(88): Cake\Routing\Router::parseRequest(Object(Cake\Http\ServerRequest))
+#2 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#3 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 /usr/local/var/www/pxmgr/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /usr/local/var/www/pxmgr/webroot/index.php(40): Cake\Http\Server->run()
+#14 /usr/local/var/www/pxmgr/index.php(16): require('/usr/local/var/...')
+#15 {main}
+
+
+2018-03-27 04:08:20 Error: [Cake\Controller\Exception\MissingActionException] Action AdminController::index() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'AdminController',
+  'action' => 'index',
+  'prefix' => 'admin',
+  'plugin' => false,
+)
+Request URL: /admin/
+Referer URL: http://localhost/pxmgr/admin/users
+Stack Trace:
+#0 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#1 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(PXMgr\Controller\Admin\AdminController))
+#2 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 /usr/local/var/www/pxmgr/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /usr/local/var/www/pxmgr/webroot/index.php(40): Cake\Http\Server->run()
+#17 /usr/local/var/www/pxmgr/index.php(16): require('/usr/local/var/...')
+#18 {main}
+
+
+2018-03-27 04:08:51 Error: [Cake\View\Exception\MissingTemplateException] Template file "Admin/Admin/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Admin/Admin/index.ctp',
+)
+Request URL: /admin/
+Referer URL: http://localhost/pxmgr/admin/users
+Stack Trace:
+#0 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/View/View.php(761): Cake\View\View->_getViewFileName('Admin/Admin/ind...')
+#1 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Controller/Controller.php(623): Cake\View\View->render(NULL, NULL)
+#2 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(125): Cake\Controller\Controller->render()
+#3 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(PXMgr\Controller\Admin\AdminController))
+#4 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 /usr/local/var/www/pxmgr/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /usr/local/var/www/pxmgr/webroot/index.php(40): Cake\Http\Server->run()
+#19 /usr/local/var/www/pxmgr/index.php(16): require('/usr/local/var/...')
+#20 {main}
+
+
+2018-03-27 04:10:17 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "panels"
+Request URL: /debug-kit/panels/view/undefined
+Referer URL: http://localhost/pxmgr/debug-kit/toolbar/eeccc7da-6829-4bb4-b8cb-92eac5ba0e87
+Stack Trace:
+#0 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/ORM/Table.php(1445): Cake\ORM\Query->firstOrFail()
+#1 /usr/local/var/www/pxmgr/vendor/cakephp/debug_kit/src/Controller/PanelsController.php(95): Cake\ORM\Table->get(Array)
+#2 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Controller/Controller.php(440): DebugKit\Controller\PanelsController->view('undefined')
+#3 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#4 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(DebugKit\Controller\PanelsController))
+#5 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /usr/local/var/www/pxmgr/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 /usr/local/var/www/pxmgr/webroot/index.php(40): Cake\Http\Server->run()
+#20 /usr/local/var/www/pxmgr/index.php(16): require('/usr/local/var/...')
+#21 {main}
+
+
+2018-03-27 04:17:06 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "/js/popper.min.js.map" could not be found.
+Exception Attributes: array (
+  'url' => '/js/popper.min.js.map',
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Router.php(370): Cake\Routing\RouteCollection->parseRequest(Object(Cake\Http\ServerRequest))
+#1 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(88): Cake\Routing\Router::parseRequest(Object(Cake\Http\ServerRequest))
+#2 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#3 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 /usr/local/var/www/pxmgr/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /usr/local/var/www/pxmgr/webroot/index.php(40): Cake\Http\Server->run()
+#14 /usr/local/var/www/pxmgr/index.php(16): require('/usr/local/var/...')
+#15 {main}
+
+
+2018-03-27 04:20:39 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "/js/popper.min.js.map" could not be found.
+Exception Attributes: array (
+  'url' => '/js/popper.min.js.map',
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Router.php(370): Cake\Routing\RouteCollection->parseRequest(Object(Cake\Http\ServerRequest))
+#1 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(88): Cake\Routing\Router::parseRequest(Object(Cake\Http\ServerRequest))
+#2 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#3 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 /usr/local/var/www/pxmgr/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /usr/local/var/www/pxmgr/webroot/index.php(40): Cake\Http\Server->run()
+#14 /usr/local/var/www/pxmgr/index.php(16): require('/usr/local/var/...')
+#15 {main}
+
+
+2018-03-27 04:23:04 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "/js/popper.min.js.map" could not be found.
+Exception Attributes: array (
+  'url' => '/js/popper.min.js.map',
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Router.php(370): Cake\Routing\RouteCollection->parseRequest(Object(Cake\Http\ServerRequest))
+#1 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(88): Cake\Routing\Router::parseRequest(Object(Cake\Http\ServerRequest))
+#2 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#3 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 /usr/local/var/www/pxmgr/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /usr/local/var/www/pxmgr/webroot/index.php(40): Cake\Http\Server->run()
+#14 /usr/local/var/www/pxmgr/index.php(16): require('/usr/local/var/...')
+#15 {main}
+
+
+2018-03-27 04:24:04 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "/js/popper.min.js.map" could not be found.
+Exception Attributes: array (
+  'url' => '/js/popper.min.js.map',
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Router.php(370): Cake\Routing\RouteCollection->parseRequest(Object(Cake\Http\ServerRequest))
+#1 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(88): Cake\Routing\Router::parseRequest(Object(Cake\Http\ServerRequest))
+#2 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#3 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 /usr/local/var/www/pxmgr/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /usr/local/var/www/pxmgr/webroot/index.php(40): Cake\Http\Server->run()
+#14 /usr/local/var/www/pxmgr/index.php(16): require('/usr/local/var/...')
+#15 {main}
+
+
+2018-03-27 04:24:24 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "/js/popper.min.js.map" could not be found.
+Exception Attributes: array (
+  'url' => '/js/popper.min.js.map',
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Router.php(370): Cake\Routing\RouteCollection->parseRequest(Object(Cake\Http\ServerRequest))
+#1 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(88): Cake\Routing\Router::parseRequest(Object(Cake\Http\ServerRequest))
+#2 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#3 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 /usr/local/var/www/pxmgr/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /usr/local/var/www/pxmgr/webroot/index.php(40): Cake\Http\Server->run()
+#14 /usr/local/var/www/pxmgr/index.php(16): require('/usr/local/var/...')
+#15 {main}
+
+
+2018-03-27 04:25:07 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "/js/popper.min.js.map" could not be found.
+Exception Attributes: array (
+  'url' => '/js/popper.min.js.map',
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Router.php(370): Cake\Routing\RouteCollection->parseRequest(Object(Cake\Http\ServerRequest))
+#1 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(88): Cake\Routing\Router::parseRequest(Object(Cake\Http\ServerRequest))
+#2 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#3 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 /usr/local/var/www/pxmgr/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /usr/local/var/www/pxmgr/webroot/index.php(40): Cake\Http\Server->run()
+#14 /usr/local/var/www/pxmgr/index.php(16): require('/usr/local/var/...')
+#15 {main}
+
+
+2018-03-27 04:25:59 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "/js/popper.min.js.map" could not be found.
+Exception Attributes: array (
+  'url' => '/js/popper.min.js.map',
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Router.php(370): Cake\Routing\RouteCollection->parseRequest(Object(Cake\Http\ServerRequest))
+#1 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(88): Cake\Routing\Router::parseRequest(Object(Cake\Http\ServerRequest))
+#2 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#3 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 /usr/local/var/www/pxmgr/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /usr/local/var/www/pxmgr/webroot/index.php(40): Cake\Http\Server->run()
+#14 /usr/local/var/www/pxmgr/index.php(16): require('/usr/local/var/...')
+#15 {main}
+
+
+2018-03-27 04:27:14 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "/js/popper.min.js.map" could not be found.
+Exception Attributes: array (
+  'url' => '/js/popper.min.js.map',
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Router.php(370): Cake\Routing\RouteCollection->parseRequest(Object(Cake\Http\ServerRequest))
+#1 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(88): Cake\Routing\Router::parseRequest(Object(Cake\Http\ServerRequest))
+#2 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#3 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 /usr/local/var/www/pxmgr/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /usr/local/var/www/pxmgr/webroot/index.php(40): Cake\Http\Server->run()
+#14 /usr/local/var/www/pxmgr/index.php(16): require('/usr/local/var/...')
+#15 {main}
+
+
+2018-03-27 04:28:15 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "/js/popper.min.js.map" could not be found.
+Exception Attributes: array (
+  'url' => '/js/popper.min.js.map',
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Router.php(370): Cake\Routing\RouteCollection->parseRequest(Object(Cake\Http\ServerRequest))
+#1 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(88): Cake\Routing\Router::parseRequest(Object(Cake\Http\ServerRequest))
+#2 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#3 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 /usr/local/var/www/pxmgr/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /usr/local/var/www/pxmgr/webroot/index.php(40): Cake\Http\Server->run()
+#14 /usr/local/var/www/pxmgr/index.php(16): require('/usr/local/var/...')
+#15 {main}
+
+
+2018-03-27 04:28:30 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "/js/popper.min.js.map" could not be found.
+Exception Attributes: array (
+  'url' => '/js/popper.min.js.map',
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Router.php(370): Cake\Routing\RouteCollection->parseRequest(Object(Cake\Http\ServerRequest))
+#1 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(88): Cake\Routing\Router::parseRequest(Object(Cake\Http\ServerRequest))
+#2 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#3 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 /usr/local/var/www/pxmgr/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /usr/local/var/www/pxmgr/webroot/index.php(40): Cake\Http\Server->run()
+#14 /usr/local/var/www/pxmgr/index.php(16): require('/usr/local/var/...')
+#15 {main}
+
+
+2018-03-27 04:29:12 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "/js/popper.min.js.map" could not be found.
+Exception Attributes: array (
+  'url' => '/js/popper.min.js.map',
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Router.php(370): Cake\Routing\RouteCollection->parseRequest(Object(Cake\Http\ServerRequest))
+#1 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(88): Cake\Routing\Router::parseRequest(Object(Cake\Http\ServerRequest))
+#2 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#3 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 /usr/local/var/www/pxmgr/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /usr/local/var/www/pxmgr/webroot/index.php(40): Cake\Http\Server->run()
+#14 /usr/local/var/www/pxmgr/index.php(16): require('/usr/local/var/...')
+#15 {main}
+
+
+2018-03-27 04:29:42 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "/js/popper.min.js.map" could not be found.
+Exception Attributes: array (
+  'url' => '/js/popper.min.js.map',
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Router.php(370): Cake\Routing\RouteCollection->parseRequest(Object(Cake\Http\ServerRequest))
+#1 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(88): Cake\Routing\Router::parseRequest(Object(Cake\Http\ServerRequest))
+#2 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#3 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 /usr/local/var/www/pxmgr/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /usr/local/var/www/pxmgr/webroot/index.php(40): Cake\Http\Server->run()
+#14 /usr/local/var/www/pxmgr/index.php(16): require('/usr/local/var/...')
+#15 {main}
+
+
+2018-03-27 04:29:52 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "/js/popper.min.js.map" could not be found.
+Exception Attributes: array (
+  'url' => '/js/popper.min.js.map',
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Router.php(370): Cake\Routing\RouteCollection->parseRequest(Object(Cake\Http\ServerRequest))
+#1 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(88): Cake\Routing\Router::parseRequest(Object(Cake\Http\ServerRequest))
+#2 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#3 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 /usr/local/var/www/pxmgr/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /usr/local/var/www/pxmgr/webroot/index.php(40): Cake\Http\Server->run()
+#14 /usr/local/var/www/pxmgr/index.php(16): require('/usr/local/var/...')
+#15 {main}
+
+
+2018-03-27 04:44:14 Error: [Cake\Network\Exception\InvalidCsrfTokenException] CSRF token mismatch.
+Request URL: /admin/users/edit/1
+Referer URL: http://localhost/pxmgr/admin/users
+Stack Trace:
+#0 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Controller/Component/CsrfComponent.php(100): Cake\Controller\Component\CsrfComponent->_validateToken(Object(Cake\Http\ServerRequest))
+#1 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Event/EventManager.php(416): Cake\Controller\Component\CsrfComponent->startup(Object(Cake\Event\Event))
+#2 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Event/EventManager.php(393): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#3 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Event/EventDispatcherTrait.php(110): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#4 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Controller/Controller.php(506): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#5 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(114): Cake\Controller\Controller->startupProcess()
+#6 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(PXMgr\Controller\Admin\UsersController))
+#7 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 /usr/local/var/www/pxmgr/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 /usr/local/var/www/pxmgr/webroot/index.php(40): Cake\Http\Server->run()
+#22 /usr/local/var/www/pxmgr/index.php(16): require('/usr/local/var/...')
+#23 {main}
+
+
+2018-03-27 04:44:16 Error: [Cake\Network\Exception\InvalidCsrfTokenException] CSRF token mismatch.
+Request URL: /admin/users/edit/1
+Referer URL: http://localhost/pxmgr/admin/users
+Stack Trace:
+#0 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Controller/Component/CsrfComponent.php(100): Cake\Controller\Component\CsrfComponent->_validateToken(Object(Cake\Http\ServerRequest))
+#1 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Event/EventManager.php(416): Cake\Controller\Component\CsrfComponent->startup(Object(Cake\Event\Event))
+#2 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Event/EventManager.php(393): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#3 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Event/EventDispatcherTrait.php(110): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#4 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Controller/Controller.php(506): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#5 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(114): Cake\Controller\Controller->startupProcess()
+#6 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(PXMgr\Controller\Admin\UsersController))
+#7 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 /usr/local/var/www/pxmgr/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 /usr/local/var/www/pxmgr/webroot/index.php(40): Cake\Http\Server->run()
+#22 /usr/local/var/www/pxmgr/index.php(16): require('/usr/local/var/...')
+#23 {main}
+
+
+2018-03-27 04:44:17 Error: [Cake\Network\Exception\InvalidCsrfTokenException] CSRF token mismatch.
+Request URL: /admin/users/edit/1
+Referer URL: http://localhost/pxmgr/admin/users
+Stack Trace:
+#0 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Controller/Component/CsrfComponent.php(100): Cake\Controller\Component\CsrfComponent->_validateToken(Object(Cake\Http\ServerRequest))
+#1 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Event/EventManager.php(416): Cake\Controller\Component\CsrfComponent->startup(Object(Cake\Event\Event))
+#2 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Event/EventManager.php(393): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#3 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Event/EventDispatcherTrait.php(110): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#4 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Controller/Controller.php(506): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#5 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(114): Cake\Controller\Controller->startupProcess()
+#6 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(PXMgr\Controller\Admin\UsersController))
+#7 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 /usr/local/var/www/pxmgr/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 /usr/local/var/www/pxmgr/webroot/index.php(40): Cake\Http\Server->run()
+#22 /usr/local/var/www/pxmgr/index.php(16): require('/usr/local/var/...')
+#23 {main}
+
+
+2018-03-27 04:44:17 Error: [Cake\Network\Exception\InvalidCsrfTokenException] CSRF token mismatch.
+Request URL: /admin/users/edit/1
+Referer URL: http://localhost/pxmgr/admin/users
+Stack Trace:
+#0 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Controller/Component/CsrfComponent.php(100): Cake\Controller\Component\CsrfComponent->_validateToken(Object(Cake\Http\ServerRequest))
+#1 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Event/EventManager.php(416): Cake\Controller\Component\CsrfComponent->startup(Object(Cake\Event\Event))
+#2 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Event/EventManager.php(393): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#3 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Event/EventDispatcherTrait.php(110): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#4 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Controller/Controller.php(506): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#5 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(114): Cake\Controller\Controller->startupProcess()
+#6 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(PXMgr\Controller\Admin\UsersController))
+#7 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 /usr/local/var/www/pxmgr/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 /usr/local/var/www/pxmgr/webroot/index.php(40): Cake\Http\Server->run()
+#22 /usr/local/var/www/pxmgr/index.php(16): require('/usr/local/var/...')
+#23 {main}
+
+
+2018-03-27 04:44:18 Error: [Cake\Network\Exception\InvalidCsrfTokenException] CSRF token mismatch.
+Request URL: /admin/users/edit/1
+Referer URL: http://localhost/pxmgr/admin/users
+Stack Trace:
+#0 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Controller/Component/CsrfComponent.php(100): Cake\Controller\Component\CsrfComponent->_validateToken(Object(Cake\Http\ServerRequest))
+#1 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Event/EventManager.php(416): Cake\Controller\Component\CsrfComponent->startup(Object(Cake\Event\Event))
+#2 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Event/EventManager.php(393): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#3 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Event/EventDispatcherTrait.php(110): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#4 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Controller/Controller.php(506): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#5 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(114): Cake\Controller\Controller->startupProcess()
+#6 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(PXMgr\Controller\Admin\UsersController))
+#7 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 /usr/local/var/www/pxmgr/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 /usr/local/var/www/pxmgr/webroot/index.php(40): Cake\Http\Server->run()
+#22 /usr/local/var/www/pxmgr/index.php(16): require('/usr/local/var/...')
+#23 {main}
+
+
+2018-03-27 04:46:18 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::login() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+  'prefix' => 'admin',
+  'plugin' => false,
+)
+Request URL: /admin/users/login?redirect=%2Fadmin%2Fusers
+Referer URL: http://localhost/pxmgr/admin/
+Stack Trace:
+#0 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#1 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(PXMgr\Controller\Admin\UsersController))
+#2 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 /usr/local/var/www/pxmgr/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /usr/local/var/www/pxmgr/webroot/index.php(40): Cake\Http\Server->run()
+#17 /usr/local/var/www/pxmgr/index.php(16): require('/usr/local/var/...')
+#18 {main}
+
+
+2018-03-27 04:47:52 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::login() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+  'prefix' => 'admin',
+  'plugin' => false,
+)
+Request URL: /admin/users/login?redirect=%2Fadmin%2Fusers
+Referer URL: http://localhost/pxmgr/admin/
+Stack Trace:
+#0 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#1 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(PXMgr\Controller\Admin\UsersController))
+#2 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 /usr/local/var/www/pxmgr/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 /usr/local/var/www/pxmgr/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /usr/local/var/www/pxmgr/webroot/index.php(40): Cake\Http\Server->run()
+#17 /usr/local/var/www/pxmgr/index.php(16): require('/usr/local/var/...')
+#18 {main}
+
+
