@@ -20,7 +20,7 @@
 			<td><?= $u->fullname ?></td>
 			<td><?= $u->email ?></td>
 			<td>
-				<?=$this->Html->link('<i class="material-icons left">edit</i>', ['action' => 'edit', $u->id], ['escape' => false]);?>
+				<?=$this->Html->link('<i class="material-icons left">edit</i>', ['action' => 'edit', $u->id], ['escape' => false, 'data-target' => '#modalUsersEdit', 'data-toggle' => 'modal']);?>
 			</td>
 		</tr>
 	<?php endforeach; ?>
@@ -31,4 +31,13 @@
 </div>
 </div>
 
-<?= $this->element('Users/edit_modal'); ?>
+<script type="text/javascript">
+	$("a[data-target='#modalUsersEdit']").click(function(ev) {
+       ev.preventDefault();
+       $("#modalContainer").load($(this).attr('href'), function() {
+          $("#modalUsersEdit").modal("show");
+       });
+    });
+</script>
+
+<?= $this->element('Users/alerts_container'); ?>

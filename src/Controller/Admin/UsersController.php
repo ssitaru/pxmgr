@@ -32,12 +32,17 @@ class UsersController extends AdminController
 		$this->set('_serialize', 'user');
 		
 		// if we want to save from Form
-		if($this->request->is('post'))
+		if($this->request->is('get'))
+		{
+			$this->render('edit', 'ajax');
+		}
+		else
 		{
 			$this->Users->patchEntity($user, $this->request->getData());
 			$this->Users->save($user);
-			$this->redirect(['action' => 'index']);
+			$this->render('/Element/ajax_success', 'ajax');
 		}
+		
 	}
 	
 	/**

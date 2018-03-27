@@ -14,13 +14,16 @@
     <?= $this->Html->script('jquery.js'); ?>
     <?= $this->Html->script('popper.min.js'); ?>
     <?= $this->Html->script('bootstrap.min.js'); ?>
+    <?= $this->Html->script('jquery.form.min.js'); ?>
     
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
 <body>
 	<div class="container">
-    <?= $this->fetch('content') ?>
+    	<?= $this->fetch('content') ?>
 	</div>
+	
+	<div id="modalContainer"></div>
 </body>
 </html>

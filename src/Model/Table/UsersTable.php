@@ -15,7 +15,7 @@ class UsersTable extends Table
     public function validationDefault(Validator $validator)
     {
 		$validator->requirePresence('username')->notEmpty('username'); 
-		$validator->requirePresence('password')->minLength('password', 8); 
+		$validator->requirePresence('password', 'create')->allowEmpty('password', 'update')->minLength('password', 8);
 		
 		return $validator;
 	}
